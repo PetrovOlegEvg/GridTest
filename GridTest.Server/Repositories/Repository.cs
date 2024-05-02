@@ -72,9 +72,13 @@ namespace GridTest.Server.Repositories
 
         private List<RowGridFormElement> GetRows(int rowCount)
         {
-            var rows = (new RowGridFormElement[rowCount]).ToList();
+            var rows = new RowGridFormElement[rowCount];
+            for (int i = 0; i< rowCount; ++i)
+            {
+                rows[i] = GetRow(i);
+            }
 
-            return rows.Select(x => GetRow(rows.IndexOf(x))).ToList();
+            return rows.ToList();
         }
 
         private RowGridFormElement GetRow(int rowIndex)
