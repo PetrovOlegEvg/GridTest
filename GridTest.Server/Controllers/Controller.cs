@@ -16,7 +16,7 @@ namespace GridTest.Server.Controllers
             _service = new Service();
         }
 
-        [HttpGet("/{rowCount}")]
+        [HttpGet("{rowCount}")]
         public IActionResult Get(int rowCount)
         {
             return Ok(_service.GetTestGrid(rowCount));
