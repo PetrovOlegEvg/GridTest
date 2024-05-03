@@ -10,6 +10,7 @@ namespace GridTest.Server.Repositories
             {
                 Id = "mainGrid",
                 Name = "Grid1",
+                Title = "Main Grid",
                 IsStaticGrid = true,
                 IsWideScreenGrid = true,
                 FrozenWidth = 62,
@@ -73,6 +74,7 @@ namespace GridTest.Server.Repositories
         private List<RowGridFormElement> GetRows(int rowCount)
         {
             var rows = new RowGridFormElement[rowCount];
+
             for (int i = 0; i< rowCount; ++i)
             {
                 rows[i] = GetRow(i);
